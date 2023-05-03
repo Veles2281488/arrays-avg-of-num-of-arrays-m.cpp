@@ -1,1 +1,25 @@
-# arrays-avg-of-num-of-arrays-m.cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "russian");
+    int array[200][200], n, m;
+    double avg, sum = 0, count = 0;
+    cin >> n >> m;
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+        {
+            cin >> array[i][j];
+            if (array[i][j] % 3 == 0)
+            {
+                sum += array[i][j];
+                count++;
+            }
+        }
+    avg = sum / count;
+    cout << "Average is = " << avg;
+
+    return 0;
+}
